@@ -1,6 +1,6 @@
-disjuntas :: Eq a => [a] -> [a] -> Bool
-disjuntas [] _ = True
-disjuntas (x:xs) ys = naoEstaNaLista x ys && disjuntas xs ys
+distintos :: Eq a => [a] -> Bool
+distintos [] = True
+distintos (x:xs) = naoEstaNaLista x xs && distintos xs
 
 naoEstaNaLista :: Eq a => a -> [a] -> Bool
 naoEstaNaLista _ [] = True
